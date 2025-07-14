@@ -1,4 +1,4 @@
-FROM nvidia/cuda:10.1-cudnn7-devel
+FROM nvidia/cuda:11.7.1-cudnn8-devel-ubuntu20.04
 
 # https://github.com/NVIDIA/nvidia-docker/issues/1632
 RUN rm /etc/apt/sources.list.d/cuda.list
