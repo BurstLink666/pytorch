@@ -2,7 +2,7 @@ FROM nvidia/cuda:11.7.1-cudnn8-devel-ubuntu20.04
 
 # https://github.com/NVIDIA/nvidia-docker/issues/1632
 RUN rm /etc/apt/sources.list.d/cuda.list
-RUN rm /etc/apt/sources.list.d/nvidia-ml.list
+# RUN rm /etc/apt/sources.list.d/nvidia-ml.list
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -y \
 	python3-opencv ca-certificates python3-dev git wget sudo ninja-build
