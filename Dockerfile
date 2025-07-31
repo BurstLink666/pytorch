@@ -6,7 +6,7 @@ RUN rm /etc/apt/sources.list.d/cuda.list
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -y \
 	python3-opencv ca-certificates python3-dev git wget sudo ninja-build python3.9 python3.9-dev python3.9-venv
-RUN ln -sv /usr/bin/python3 /usr/bin/python /usr/bin/python3.9
+RUN ln -sv /usr/bin/python3 /usr/bin/python
 
 # create a non-root user
 ARG USER_ID=1000
