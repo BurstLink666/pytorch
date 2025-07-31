@@ -5,8 +5,8 @@ RUN rm /etc/apt/sources.list.d/cuda.list
 # RUN rm /etc/apt/sources.list.d/nvidia-ml.list
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -y \
-	python3-opencv ca-certificates python3-dev git wget sudo ninja-build
-RUN ln -sv /usr/bin/python3 /usr/bin/python
+	python3-opencv ca-certificates python3-dev git wget sudo ninja-build python3.9 python3.9-dev python3.9-venv
+RUN ln -sv /usr/bin/python3 /usr/bin/python /usr/bin/python3.9
 
 # create a non-root user
 ARG USER_ID=1000
